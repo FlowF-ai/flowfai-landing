@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 export default function CTA() {
   return (
@@ -14,7 +15,7 @@ export default function CTA() {
         </div>
         <div className="lg:w-1/2 lg:pl-12">
           <Image
-            src="/prefoot.webp"
+            src={getImagePath('/prefoot.webp')}
             alt="Join FlowFai"
             width={400}
             height={300}    

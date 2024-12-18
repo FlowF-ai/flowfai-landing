@@ -1,6 +1,7 @@
 import { Brain, Coins, FileCode, Layers } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
+import { getImagePath } from '@/lib/utils'
 
 const features = [
   {
@@ -41,7 +42,7 @@ export default function Features() {
         </div>
         <div className="mt-16">
           <Image
-            src="/features.webp"
+            src={getImagePath('/features.webp')}
             alt="FlowFai Features"
             width={600}
             height={300}

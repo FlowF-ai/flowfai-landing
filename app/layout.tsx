@@ -5,7 +5,14 @@ import ThemeProvider from "./components/ThemeProvider"
 import React from "react"
 
 
-const roboto = Roboto_Mono({ subsets: ["latin"] })
+
+const roboto = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  preload: false,
+  weight: ['400', '700'],
+  variable: '--font-roboto-mono'
+})
 
 export const metadata: Metadata = {
   title: "FlowFai",

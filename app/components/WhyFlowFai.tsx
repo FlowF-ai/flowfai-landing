@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { CheckCircle } from 'lucide-react'
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 const reasons = [
   "New VM for efficient execution",
@@ -18,7 +19,7 @@ export default function WhyFlowFai() {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
             <Image
-              src="/why.webp"
+              src={getImagePath('/why.webp')}
               alt="Why FlowFai"
               width={400}
               height={400}

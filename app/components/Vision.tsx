@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 export default function Vision() {
   return (
@@ -7,7 +8,7 @@ export default function Vision() {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
             <Image
-              src="/vision.webp"
+              src={getImagePath('/vision.webp')}
               alt="FlowFai Vision"
               width={400}
               height={400}

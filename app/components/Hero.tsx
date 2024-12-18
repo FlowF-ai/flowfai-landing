@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import { getImagePath } from '@/lib/utils'
 
 export default function Hero() {
   return (
@@ -24,7 +25,7 @@ export default function Hero() {
         </div>
         <div className="lg:w-1/2">
           <Image
-            src="/hero.webp"
+            src={getImagePath('/hero.webp')}
             alt="FlowFai Hero"
             width={400}
             height={400}
