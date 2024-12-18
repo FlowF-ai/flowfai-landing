@@ -1,14 +1,9 @@
 import type { NextConfig } from 'next'
  
 const nextConfig: NextConfig = {
-  devIndicators: {
-    appIsrStatus: false,
-  },
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: '/flowfai-landing',
+  basePath: "/2048-in-react", 
+  output: "export",
+  reactStrictMode: true,
 }
  
 export default nextConfig
