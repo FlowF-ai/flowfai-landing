@@ -3,6 +3,7 @@ import { Roboto_Mono } from "next/font/google"
 import "./globals.css"
 import ThemeProvider from "./components/ThemeProvider"
 import React from "react"
+import { config } from "@/lib/utils"
 
 const roboto = Roboto_Mono({
   subsets: ['latin'],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   title: "FlowFai",
   description: "Your AI-powered DeFi platform",
   icons: {
-    icon: "/favicon.ico",
+    icon: config.isProd ? '/flowfai-landing/favicon.ico' : '/favicon.ico',
   }
 }
 
@@ -30,7 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link 
+        rel="icon" 
+        href={config.isProd ? '/flowfai-landing/favicon.ico' : '/favicon.ico'} 
+        sizes="any"
+      />
         <style>{`
           /* Prevenir FOUT */
           html {
