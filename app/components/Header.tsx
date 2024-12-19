@@ -15,8 +15,8 @@ export default function Header() {
   return (
     <header className="py-6">
       <nav className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold gradient-text">
-          <ImageWithFallback src={getImagePath('/logo.webp')} height={75} width={56} alt='Logo'></ImageWithFallback>
+        <Link href="/" >
+          <ImageWithFallback src={getImagePath('/logo.webp')} height={70} width={70} alt='Logo'></ImageWithFallback>
         </Link>
         <div className="flex items-center space-x-4">
           <NavigationMenu>
