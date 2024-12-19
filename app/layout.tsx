@@ -1,17 +1,17 @@
 import type { Metadata } from "next"
-import {  Roboto_Mono } from "next/font/google"
+import { Roboto_Mono } from "next/font/google"
 import "./globals.css"
 import ThemeProvider from "./components/ThemeProvider"
 import React from "react"
 
-
-
 const roboto = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
-  preload: false,
   weight: ['400', '700'],
-  variable: '--font-roboto-mono'
+  variable: '--font-roboto-mono',
+  preload: true,
+  fallback: ['monospace'],
+  adjustFontFallback: true
 })
 
 export const metadata: Metadata = {
@@ -20,8 +20,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   }
-  }
-
+}
 
 export default function RootLayout({
   children,
@@ -30,8 +29,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      
-      <body className={`${roboto.className} antialiased`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>{`
+          /* Prevenir FOUT */
+          html {
+            visibility: visible;
+            opacity: 1;
+          }
+        `}</style>
+      </head>
+      <body className={`${roboto.variable} font-mono antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

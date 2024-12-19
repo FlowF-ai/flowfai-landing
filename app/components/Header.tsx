@@ -7,15 +7,16 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import Image from 'next/image'
 import React from 'react'
+import { getImagePath } from '@/lib/utils'
+import ImageWithFallback from './ImageWithFallback'
 
 export default function Header() {
   return (
     <header className="py-6">
       <nav className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold gradient-text">
-          <Image src='/logo.webp' height={100} width={100} alt='Logo'></Image>
+          <ImageWithFallback src={getImagePath('/logo.webp')} height={100} width={75} alt='Logo'></ImageWithFallback>
         </Link>
         <div className="flex items-center space-x-4">
           <NavigationMenu>

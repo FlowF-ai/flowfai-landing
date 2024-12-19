@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { CheckCircle } from 'lucide-react'
-import Image from 'next/image'
 import { getImagePath } from '@/lib/utils'
+import ImageWithFallback from './ImageWithFallback'
 
 const reasons = [
   "New VM for efficient execution",
@@ -18,7 +18,7 @@ export default function WhyFlowFai() {
         <h2 className="text-4xl font-bold text-center mb-12 gradient-text">Why FlowFai?</h2>
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
-            <Image
+            <ImageWithFallback
               src={getImagePath('/why.webp')}
               alt="Why FlowFai"
               width={400}

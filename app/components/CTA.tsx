@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import { getImagePath } from '@/lib/utils'
-
+import ImageWithFallback from './ImageWithFallback'
 export default function CTA() {
   return (
     <section id="cta" className="py-20  gradient-text">
@@ -14,11 +13,11 @@ export default function CTA() {
           <Button  size="lg" variant='ghost'>Get Started Now</Button>
         </div>
         <div className="lg:w-1/2 lg:pl-12">
-          <Image
+          <ImageWithFallback
             src={getImagePath('/prefoot.webp')}
             alt="Join FlowFai"
             width={400}
-            height={300}    
+            height={400}    
             className="rounded-lg shadow-lg mx-auto"
           />
         </div>

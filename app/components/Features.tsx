@@ -1,7 +1,7 @@
 import { Brain, Coins, FileCode, Layers } from 'lucide-react'
-import Image from 'next/image'
 import React from 'react'
 import { getImagePath } from '@/lib/utils'
+import ImageWithFallback from './ImageWithFallback'
 
 const features = [
   {
@@ -41,11 +41,11 @@ export default function Features() {
           ))}
         </div>
         <div className="mt-16">
-          <Image
+          <ImageWithFallback  
             src={getImagePath('/features.webp')}
             alt="FlowFai Features"
             width={600}
-            height={300}
+            height={600}
             className="rounded-lg shadow-lg mx-auto"
           />
         </div>

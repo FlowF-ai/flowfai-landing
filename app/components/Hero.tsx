@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { getImagePath } from '@/lib/utils'
+import ImageWithFallback from "./ImageWithFallback";
 
 export default function Hero() {
   return (
@@ -24,7 +25,7 @@ export default function Hero() {
           </Button>
         </div>
         <div className="lg:w-1/2">
-          <Image
+          <ImageWithFallback
             src={getImagePath('/hero.webp')}
             alt="FlowFai Hero"
             width={400}
