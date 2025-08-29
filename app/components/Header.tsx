@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ModeToggle from './ModeToggle'
+import MetaMaskConnect from './MetaMaskConnect'
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -44,6 +45,7 @@ export default function Header() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+          <MetaMaskConnect />
           <ModeToggle />
         </div>
       </nav>
