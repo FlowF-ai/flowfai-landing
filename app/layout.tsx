@@ -1,19 +1,19 @@
 import type { Metadata } from "next"
-// import { Roboto_Mono } from "next/font/google"
+import { Roboto_Mono } from "next/font/google"
 import "./globals.css"
 import ThemeProvider from "./components/ThemeProvider"
 import React from "react"
 import { config } from "@/lib/utils"
 
-// const roboto = Roboto_Mono({
-//   subsets: ['latin'],
-//   display: 'swap',
-//   weight: ['400', '700'],
-//   variable: '--font-roboto-mono',
-//   preload: true,
-//   fallback: ['monospace'],
-//   adjustFontFallback: true
-// })
+const roboto = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '700'],
+  variable: '--font-roboto-mono',
+  preload: true,
+  fallback: ['monospace'],
+  adjustFontFallback: true
+})
 
 export const metadata: Metadata = {
   title: "FlowFai",
@@ -45,7 +45,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className="font-mono antialiased">{/* className={`${roboto.variable} font-mono antialiased`} */}
+      <body className={`${roboto.variable} font-mono antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
