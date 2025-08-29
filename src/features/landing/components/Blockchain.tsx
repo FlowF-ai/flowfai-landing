@@ -2,7 +2,7 @@
 
 import React from "react";
 import { getImagePath } from "@/lib/utils";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageWithFallback from "@/shared/components/ImageWithFallback";
 
 export default function Blockchain() {
   return (

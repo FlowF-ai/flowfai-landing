@@ -1,7 +1,7 @@
 import { Brain, Coins, FileCode, Layers } from "lucide-react";
 import React from "react";
 import { getImagePath } from "@/lib/utils";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageWithFallback from "@/shared/components/ImageWithFallback";
 
 const features = [
   {

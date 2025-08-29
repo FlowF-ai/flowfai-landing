@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import Link from "next/link";
 import { getImagePath } from "@/lib/utils";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageWithFallback from "@/shared/components/ImageWithFallback";
 
 export default function Hero() {
   return (

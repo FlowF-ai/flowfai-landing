@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { CheckCircle } from "lucide-react";
 import { getImagePath } from "@/lib/utils";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageWithFallback from "@/shared/components/ImageWithFallback";
 
 const reasons = [
   "New VM for efficient execution",

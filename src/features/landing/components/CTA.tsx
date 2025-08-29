@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { getImagePath } from "@/lib/utils";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageWithFallback from "@/shared/components/ImageWithFallback";
 export default function CTA() {
   return (
     <section id="cta" className="py-20  gradient-text">
