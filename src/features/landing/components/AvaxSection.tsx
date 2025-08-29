@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import React from "react";
 import { getImagePath } from "@/lib/utils";
 import ImageWithFallback from "@/shared/components/ImageWithFallback";

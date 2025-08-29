@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import * as metamaskService from '@/features/wallet/services/metamask.service'
 import { formatAddress, formatBalance } from '@/shared/utils/formatters'
 import { extractErrorMessage } from '@/shared/utils/validation'
-import type { WalletState, WalletAddress, WalletBalance } from '@/types/wallet'
+import type { WalletState, WalletAddress, WalletBalance } from '../types/wallet'
 import { AVALANCHE_MAINNET, WALLET_ERRORS } from '@/shared/constants/blockchain'
 
 export function useWalletConnection() {

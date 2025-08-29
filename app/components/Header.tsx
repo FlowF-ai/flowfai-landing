@@ -1,6 +1,6 @@
 import Link from "next/link";
-import ModeToggle from "./ModeToggle";
-import { WalletConnect } from "./WalletConnect";
+import ModeToggle from "@/shared/components/ModeToggle";
+import { WalletConnect } from "@/features/wallet/components/WalletConnect";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import React from "react";
 import { getImagePath } from "@/lib/utils";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageWithFallback from "@/shared/components/ImageWithFallback";
 
 export default function Header() {
   return (
@@ -28,25 +28,28 @@ export default function Header() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="#features" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Features
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="#features">Features</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#avax" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    AVAX
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="#avax">AVAX</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#cta" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Get Started
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="#cta">Get Started</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

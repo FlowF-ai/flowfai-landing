@@ -3,7 +3,7 @@
  * Following Clean Architecture - external concerns separated from domain logic
  */
 
-import { NetworkConfig } from '@/types/wallet'
+import { NetworkConfig } from '@/features/wallet/types/wallet'
 
 export const AVALANCHE_MAINNET: NetworkConfig = {
   chainId: '0xa86a', // 43114 in decimal

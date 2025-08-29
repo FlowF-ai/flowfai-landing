@@ -1,5 +1,5 @@
 import { ethers } from 'ethers'
-import { WalletConnectionResult, NetworkConfig } from '@/types/wallet'
+import { WalletConnectionResult, NetworkConfig } from '../types/wallet'
 import { WALLET_ERRORS } from '@/shared/constants/blockchain'
 
 interface EthereumProvider {
